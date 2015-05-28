@@ -1,0 +1,460 @@
+
+=begin
+	
+rescue Exception => e
+	
+end	
+h1 = {"a" => 1, "b" => 2}
+h2 = {"c" => 23, "b" => 666}
+puts h1.merge(h2)
+puts h1
+puts h1.merge!(h2)
+puts h1
+=end
+
+#zadanie 1
+
+a = 1
+puts a.to_i
+puts a.to_f
+
+#zadanie2
+=begin
+imie = "Jacek"
+jacek_tablica = imie.split("")
+puts jacek_tablica
+puts jacek_tablica[0]
+puts jacek_tablica.reverse
+puts imie.reverse
+=end
+#zadanie5
+=begin
+a = 7
+b = 3
+a,b = b,a
+puts a
+puts b
+=end
+#zadanie6
+=begin
+a = 20%3
+puts a
+=end
+#zadanie 7
+=begin
+for i in 1..100
+	if i%3 == 0
+		puts i
+	end
+end
+=end
+#zadanie 8
+#a = 2**8
+#puts a
+#silnia
+=begin
+def silnia(n)
+	if n == 0
+		return 1
+	else
+		n*silnia(n-1)
+	end
+end
+
+puts silnia(15)
+=end
+#zadanie 10
+=begin
+liczba = gets.chomp
+a = liczba.split("")
+puts a.last
+puts a.first
+
+#zadanie 13
+=begin
+a = "kamila".split("")
+b = a.length/2
+puts a[b]
+puts a[0]
+=end
+#zadanie 14
+=begin
+imie = "Jacek"
+nazwisko = "Mackowski"
+puts imie_nazwisko = imie + " " + nazwisko
+=end
+#zadanie 15
+=begin
+puts "Podaj imie"
+imie = gets.chomp #pobranie imienia z klawiatury
+puts "Twoje imie to #{imie}"
+def jakie_imie(imie)
+	imie=imie.split("")
+	if imie.last=="a"
+		puts "imie zenskie " + imie.join
+	else
+		puts "imie meskie " + imie.join
+	end
+end
+jakie_imie(imie)
+=end
+
+#array = (1..100).to_a
+#p array
+#puts array
+#array.each do |i|
+#	puts i + 2
+#end
+#puts array.reverse
+=begin
+tablica = ["Maciek", "Wioletta", "Kamil", "Michal", "Kasia", "Michal"]
+tablica.each do |s|
+	if(s=="Michal")
+		puts s
+	end
+end
+=end
+=begin
+tablica = []
+100.times do
+	tablica << rand(1..500)
+end
+tablica2 = []
+tablica.each do |s|
+	tablica2.push(s) if s%3==0 
+	end
+p tablica2
+=end
+=begin
+def funkcja(a,b) 
+	for i in a..b
+		puts i
+	end
+end
+funkcja(1, 6)
+=end
+=begin
+50.times do
+	puts "Witaj swiecie"
+end
+=end
+#zadanie 3 i 4
+=begin
+tablica = []
+i=1
+index=0
+10.times do 
+	tablica << rand(1..10)
+end
+def funkcja(tab)
+	tablica.each do |s|
+		index=index+i
+		if (s==1)
+			puts index
+		else
+			puts -1
+		end	
+	end
+end
+funkcja(tablica)
+=end
+#zadanie 5
+=begin
+puts "Podaj liczbe a:"
+a=gets.chomp.to_i
+puts "Podaj liczbe b"
+b=gets.chomp.to_i
+def funkcja (a, b)
+	puts 20*a+b
+end
+funkcja(a,b)
+=end
+=begin
+def potega(a=3, n=5)
+	return a**n
+end
+a=3
+n=2
+puts potega
+puts potega(a, n)
+=end
+=begin
+def podzielna_przez_5(a)
+	if(a%5==0)
+		puts "Liczba podzielna przez 5"
+	else
+		puts "Liczba nie jest podzielna przez 5"
+	end
+end
+puts "Podaj liczbe"
+a=gets.chomp.to_i
+podzielna_przez_5(a)
+=end
+=begin
+puts "Wprowadz wyraz"
+lancuch=gets.chomp
+def odczyt_dwoch_pierwszych_liter(lancuch)
+	x=lancuch.split("")
+	#puts lancuch[0], lancuch[1]
+	puts x.first(2)
+end
+odczyt_dwoch_pierwszych_liter(lancuch)
+=end
+=begin
+puts "Podaj liczbe calkowita"
+a=gets.chomp.to_i
+
+def podzielna_przez_4(a)
+	if a%4==0
+		puts a, a/4
+	else
+		puts a*4-2
+	end
+end
+podzielna_przez_4(a)
+=end
+#DZIEN DRUGI
+#zadania skladnia
+#zadanie 1
+=begin
+def piec_razy_wieksza(a)
+puts a*5
+end
+puts "Podaj liczbe"
+a = gets.chomp.to_i
+piec_razy_wieksza(a)
+=end
+#zadanie 2
+=begin
+def ostatnie_slowo(a)
+	x=a.split("")
+	puts x.last
+end
+def pierwsze_slowo(a)
+	x=a.split("")
+	puts x.first
+end
+puts "Podaj slowo"
+a=gets.chomp
+ostatnie_slowo(a)
+puts "\n"
+=end
+#zadanie 3
+=begin
+def podzielna_przez_4(a)
+if a%4==0
+	puts "Liczba podzielna przez 4"
+else
+	puts "Liczba nie jest podzielna przez 4"
+end
+end
+puts "Podaj liczbe"
+a = gets.chomp.to_i
+podzielna_przez_4(a)
+=end
+#zadanie 4
+=begin
+def mniejsza_od_zera(a)
+if a<0
+	puts "Liczba mniejsza od zera"
+else if a==0
+	puts "Liczba jest rowna zero"
+else
+	puts "Liczba wieksza od zera"
+end
+end
+end
+puts "Podaj liczbe"
+a = gets.chomp.to_i
+mniejsza_od_zera(a)
+=end
+#zadanie 5
+=begin
+spiacy=true
+if spiacy
+	puts "Spiacy"
+else
+	puts "Ide na impreze"
+end
+unless spiacy
+	puts "Spiacy"
+else
+	puts "Ide na impreze"
+end
+=end
+#zadanie 6
+=begin
+i = 2 
+while i <5 
+ puts "Witam" 
+end 
+=end
+#zadanie 7
+=begin
+for i in 1..5
+	puts i+5
+end
+=end
+#zadanie 8
+=begin
+a = 5 
+b = 10 
+c = 12 
+c = 10 if a>b #c=12
+c = c*2 if a<b #c=24
+a = a+5 #a=10, b=10
+puts a, b, c
+=end
+#zadanie 9
+=begin
+10.times do
+	puts "ala"
+end #w zadaniu brakuje "end"
+=end
+#UWAGA: po zaznaczeniu kilku linijek i wcisnieciu "ctrl+/"
+#zakomendowane beda te linijki
+#zadanie 10
+=begin
+a,b = 5,8 #a=5, b=8
+c = a #c=5
+a,c = b,a #a=8, c=5, b=8
+puts a, b, c
+=end
+#zadanie 14
+=begin
+tab1=[1,2,3,4,5,6,7,8,9,10]
+tab2=[1,5,7,9,11,12,13,14,15]
+t=tab1&tab2
+puts t
+puts t.min
+=end 
+#zadanie 20
+=begin
+a=2
+b=5
+c=""
+d="rtbf"
+puts a, b, c, d
+=end
+#zadanie 21
+=begin
+# for i in 100..300
+# 	puts i
+# end
+i=100
+while i<301 do
+	puts i
+	i=i+1
+end
+=end
+#zadanie 22
+=begin
+puts "Wpisz wyraz"
+a=gets.chomp
+x=a.split("")
+puts x[1]
+=end
+#zadanie 23
+=begin
+a="WWW"
+b="www"
+puts a.downcase
+puts a
+puts b.upcase
+=end
+#zadanie 24
+=begin
+puts "Podaj liczbe"
+a=gets.chomp.to_f
+x=Math.sqrt(a)
+puts x
+=end
+#zadanie 25
+=begin
+puts "Wprowadz wyraz"
+a=gets.chomp
+x=a.split("").last(2)
+puts x
+=end
+#zadanie 26
+=begin
+a=[3,4,7,2,5,3,2,8]
+puts a.last(2)
+=end
+#zadanie 31
+=begin
+for i in 2..1000
+	if i%7==0 && i%9==0
+		puts i
+	end
+end
+=end
+#zadanie 33
+=begin
+for i in 2..200
+	puts 202 - i
+end
+puts "Druga metoda"
+200.downto(2) {|n| puts n}
+=end
+#przypisanie elementow do pustej tablicy
+=begin
+tab=[]
+1.upto(10){|n| tab<<n}
+puts tab
+=end
+#KLASY
+#Klasa Person
+=begin
+class Person
+	def initialize(name, surname, age, gender)
+		@name = name
+		@surname = surname
+		@age = age
+		@gender = gender
+	end
+def name
+	puts @name
+end
+def surname
+	puts @surname
+end
+def full_name
+	puts "#{@name} #{@surname} Wiek: #{@age}"
+end
+end
+p = Person.new("Adam", "Kowalski", 18, "Male")
+p.name
+p.full_name
+=end
+#Klasa Samochod
+=begin
+class Samochod
+	attr_accessor :model
+	def initialize(brand, model, price)
+		@brand = brand
+		@model = model
+		@price = price
+	end
+	def show
+		puts "#{@brand} Cena: #{@price}"
+	end
+end
+p=Samochod.new("bmw", "z3", 10000)
+p.show
+puts p.model
+p.model = "e46"
+puts p.model
+=end
+#referencje
+=begin
+class Person
+attr_accessor :name
+end
+p1 =Person.new
+p2 = Person.new
+p1.name = "Adam"
+p2 =p1
+p1.name = "Piotr"
+puts p2.name
+=end
